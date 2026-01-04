@@ -1,0 +1,33 @@
+# Model Configuration
+model:
+  name: "MolecularPropertyPredictor"
+  input_dim: 100  # Dimension of input features
+  hidden_dim: 128  # Dimension of hidden layers
+  output_dim: 1    # Number of properties to predict
+  dropout: 0.2     # Dropout rate
+
+# Training Configuration
+training:
+  batch_size: 32
+  epochs: 100
+  learning_rate: 0.001
+  device: "cpu"  # Use "cuda" for GPU training
+  seed: 42
+
+# Data Configuration
+data:
+  train_split: 0.8
+  val_split: 0.1
+  test_split: 0.1
+  shuffle: true
+
+# Paths
+paths:
+  data_dir: "data/"
+  model_dir: "models/"
+  output_dir: "outputs/"
+  
+# Logging
+logging:
+  log_interval: 10  # Log every N epochs
+  save_best_model: true
